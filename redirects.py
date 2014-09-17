@@ -39,13 +39,14 @@ def load_redirects():
     if hasattr(settings, 'REDIRECTS_PATH'):
         redirect_file_path = settings.REDIRECTS_PATH
 
-    if not exists(redirect_file_path):
-        return []
+    redirect_patterns = []
 
-    with open(redirect_file_path) as redirect_file:
-        redirect_dict = json.loads(redirect_file.read())
+    if exists(redirect_file_path):
+        with open(redirect_file_path) as redirect_file:
+            redirect_dict = json.loads(redirect_file.read())
+            redirect_patterns = [
+                convert_to_url_pattern(request, location)
+                for request, location in redirect_dict.iteritems()
+            ]
 
-	return [
-        convert_to_url_pattern(request, location)
-        for request, location in redirect_dict.iteritems()
-    ]
+    return redirect_patterns
