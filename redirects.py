@@ -6,8 +6,11 @@ from django.conf import settings
 from django.shortcuts import redirect
 
 
-def convert_to_url_pattern(request, location):
-	return url(r'^%s$' % request, lambda n: redirect("%s" % location))
+def convert_to_url_pattern(get_request, location):
+	return url(
+	    r'^{0}$'.format(get_request),
+	    lambda request: redirect("%s" % location)
+	)
 
 def load_redirects():
     """
