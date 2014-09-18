@@ -7,10 +7,11 @@ from django.shortcuts import redirect
 
 
 def convert_to_url_pattern((get_request, location)):
-	return url(
-	    r'^{0}$'.format(get_request),
-	    lambda request: redirect("%s" % location)
-	)
+    return url(
+        r'^{0}$'.format(get_request),
+        lambda request: redirect("%s" % location)
+    )
+
 
 def load_redirects():
     """
@@ -34,8 +35,8 @@ def load_redirects():
 
     the json format is simply key/value pairs, from source to destination:
     {
-        "getubuntu/download_static": "http://www.ubuntu.com/netbook/get-ubuntu/download",
-        "testing/quantal/alpha1":    "https://wiki.ubuntu.com/QuantalQuetzal/TechnicalOverview/Alpha1"
+        "getubuntu/": "http://www.ubuntu.com/",
+        "wiki":    "https://wiki.ubuntu.com/"
     }
     """
 
