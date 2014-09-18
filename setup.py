@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-redirects-file',
-    version='0.1',
+    version='0.1.1',
     author='Tris',
     author_email='tristram.oaten@canonical.com',
     url='https://github.com/ubuntudesign/django-redirects-file',
