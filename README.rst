@@ -1,4 +1,5 @@
-Usage:
+Usage
+-----
 
 Import this in urls.py and assign it to urlpatterns
 BEFORE custom urls. (redirects should be hit first)
@@ -11,7 +12,10 @@ e.g:
         url(r'^(?P<template>.*)/?$', TemplateFinder.as_view()),
     )
 
-the json format is simply key/value pairs, from source to destination:
+redirects.json Format
+---------------------
+
+The json format is simply key/value pairs, from source to destination:
 
 .. code:: javascript
 
