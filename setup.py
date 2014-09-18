@@ -7,7 +7,7 @@ setup(
     author_email='tristram.oaten@canonical.com',
     url='https://github.com/ubuntudesign/django-redirects-file',
     packages=[
-        'django-redirects-file'
+        'django_redirects_file'
     ],
     description=(
         'A simple redirects utility that uses '
