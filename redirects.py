@@ -21,6 +21,8 @@ def load_redirects():
     BEFORE custom urls. (redirects should be hit first)
     e.g:
 
+    from django_redirects_file import load_redirects
+
     urlpatterns = load_redirects()
     urlpatterns += patterns('',
         url(r'^(?P<template>.*)/?$', TemplateFinder.as_view()),

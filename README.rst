@@ -7,6 +7,8 @@ e.g:
 
 .. code:: python
 
+    from django_redirects_file import load_redirects
+    
     urlpatterns = load_redirects()
     urlpatterns += patterns('',
         url(r'^(?P<template>.*)/?$', TemplateFinder.as_view()),
