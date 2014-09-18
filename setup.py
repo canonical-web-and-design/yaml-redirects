@@ -11,7 +11,7 @@ setup(
     ],
     description=(
         'A simple redirects utility that uses '
-        'a simple json file for redirects definitions'
+        'a json file for redirects definitions'
     ),
     long_description=open('README.rst').read(),
     install_requires=[
