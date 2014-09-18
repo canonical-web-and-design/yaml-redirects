@@ -12,8 +12,8 @@ e.g:
         url(r'^(?P<template>.*)/?$', TemplateFinder.as_view()),
     )
 
-redirects.json Format
----------------------
+Format of redirects.json
+------------------------
 
 The json format is simply key/value pairs, from source to destination:
 
