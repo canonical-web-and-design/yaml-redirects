@@ -6,7 +6,9 @@ from django.conf import settings
 from django.shortcuts import redirect
 
 
-def convert_to_url_pattern((get_request, location)):
+def convert_to_url_pattern(redirect_pair):
+    get_request, location = redirect_pair
+
     return url(
         r'^{0}$'.format(get_request),
         lambda request: redirect("%s" % location)
@@ -24,7 +26,10 @@ def load_redirects():
     from django_redirects_file import load_redirects
 
     urlpatterns = load_redirects()
-    urlpatterns += patterns(...)
+    urlpatterns += [
+        url(...),
+        ...
+    ]
 
     the json format is simply key/value pairs, from source to destination:
     {
@@ -44,9 +49,9 @@ def load_redirects():
     if exists(redirect_file_path):
         with open(redirect_file_path) as redirect_file:
             redirect_dict = json.loads(redirect_file.read())
-            redirect_patterns = map(
+            redirect_patterns = list(map(
                 convert_to_url_pattern,
-                redirect_dict.iteritems()
-            )
+                redirect_dict.items()
+            ))
 
     return redirect_patterns
