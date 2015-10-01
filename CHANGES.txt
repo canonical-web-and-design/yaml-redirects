@@ -1,3 +1,4 @@
 v0.1, 2014-09-17 -- Initial release.
 v0.1.1, 2014-09-18 -- Tweaked description.
 v0.2, 2015-10-01 -- Python 3 support.
+v0.3, 2015-10-01 -- Rename from django-redirects-file to django-json-redirects.

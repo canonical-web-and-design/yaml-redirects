@@ -1,19 +1,18 @@
 from setuptools import setup
 
 setup(
-    name='django-redirects-file',
-    version='0.2',
+    name='django-json-redirects',
+    version='0.3',
     author='Tris',
     author_email='tristram.oaten@canonical.com',
-    url='https://github.com/ubuntudesign/django-redirects-file',
+    url='https://github.com/ubuntudesign/django-json-redirects',
     packages=[
-        'django_redirects_file'
+        'django_json_redirects'
     ],
     description=(
         'A simple redirects utility that uses '
         'a json file for redirects definitions'
     ),
-    long_description=open('README.rst').read(),
     install_requires=[
         "Django >= 1.3",
     ],
