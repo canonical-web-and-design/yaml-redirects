@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='django-yaml-redirects',
     version='0.1',
-    author='Robin',
+    author='Robin Winslow',
     author_email='robin@canonical.com',
     url='https://github.com/ubuntudesign/django-yaml-redirects',
     packages=[
@@ -11,7 +11,7 @@ setup(
     ],
     description=(
         'A simple redirects utility that uses '
-        'a yaml file for redirects definitions'
+        'a YAML file for redirects definitions'
     ),
     install_requires=[
         "Django >= 1.3",
