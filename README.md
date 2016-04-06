@@ -21,6 +21,8 @@ The YAML format is simply key/value pairs, from source to destination:
 # redirects.yaml
 
 getubuntu/download_static: http://www.ubuntu.com/netbook/get-ubuntu/download
-testing/quantal/alpha1:    https://wiki.ubuntu.com/QuantalQuetzal/TechnicalOverview/Alpha1
+
+# Also supports regex:
+testing/.+/alpha1/?:       https://wiki.ubuntu.com/QuantalQuetzal/TechnicalOverview/Alpha1
 ```
 
