@@ -36,3 +36,5 @@ json.dumps(dict([
     if len(i.split('  ')) >= 2 #ignore whole comment lines
 ]))
 ```
+
+For example, using [this script](https://gist.github.com/nottrobin/4a4f0162be577703cf851fbbe77f411b).
