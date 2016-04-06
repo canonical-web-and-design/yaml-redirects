@@ -10,7 +10,7 @@ def convert_to_url_pattern(redirect_pair):
     get_request, location = redirect_pair
 
     return_url = url(
-        r'^{0}$'.format(get_request.encode('utf-8')),
+        r'^{0}$'.format(get_request),
         lambda request: redirect("%s" % location)
     )
 
