@@ -3,7 +3,7 @@ from os.path import exists
 
 from django.conf.urls import url
 from django.conf import settings
-from django.shortcuts import redirect
+from django.views.generic.base import RedirectView
 
 
 def convert_to_url_pattern(redirect_pair):
@@ -11,7 +11,7 @@ def convert_to_url_pattern(redirect_pair):
 
     return_url = url(
         r'^{0}$'.format(get_request),
-        lambda request: redirect("%s" % location)
+        RedirectView.as_view(url=location)
     )
 
     return return_url
@@ -56,3 +56,4 @@ def load_redirects():
             ))
 
     return redirect_patterns
+
