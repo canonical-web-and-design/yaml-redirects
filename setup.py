@@ -1,19 +1,21 @@
 from setuptools import setup
 
 setup(
-    name='django-json-redirects',
-    version='0.3',
-    author='Tris',
-    author_email='tristram.oaten@canonical.com',
-    url='https://github.com/ubuntudesign/django-json-redirects',
+    name='django-yaml-redirects',
+    version='0.4',
+    author='Robin Winslow',
+    author_email='robin@canonical.com',
+    url='https://github.com/ubuntudesign/django-yaml-redirects',
     packages=[
-        'django_json_redirects'
+        'django_yaml_redirects'
     ],
     description=(
         'A simple redirects utility that uses '
-        'a json file for redirects definitions'
+        'a YAML file for redirects definitions'
     ),
     install_requires=[
         "Django >= 1.3",
+        "PyYaml",
     ],
 )
+

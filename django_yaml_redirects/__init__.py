@@ -1,18 +1,20 @@
-import json
+import yaml
 from os.path import exists
 
 from django.conf.urls import url
 from django.conf import settings
-from django.shortcuts import redirect
+from django.views.generic.base import RedirectView
 
 
 def convert_to_url_pattern(redirect_pair):
     get_request, location = redirect_pair
 
-    return url(
+    return_url = url(
         r'^{0}$'.format(get_request),
-        lambda request: redirect("%s" % location)
+        RedirectView.as_view(url=location)
     )
+
+    return return_url
 
 
 def load_redirects():
@@ -31,14 +33,13 @@ def load_redirects():
         ...
     ]
 
-    the json format is simply key/value pairs, from source to destination:
-    {
-        "getubuntu/": "http://www.ubuntu.com/",
-        "wiki":    "https://wiki.ubuntu.com/"
-    }
+    the YAML format is simply key/value pairs, from source to destination:
+
+        getubuntu/: http://www.ubuntu.com/
+        wiki:      https://wiki.ubuntu.com/
     """
 
-    redirect_file_path = settings.BASE_DIR + '/redirects.json'
+    redirect_file_path = settings.BASE_DIR + '/redirects.yaml'
 
     # Read custom redirect location
     if hasattr(settings, 'REDIRECTS_PATH'):
@@ -48,10 +49,11 @@ def load_redirects():
 
     if exists(redirect_file_path):
         with open(redirect_file_path) as redirect_file:
-            redirect_dict = json.loads(redirect_file.read())
+            redirect_dict = yaml.load(redirect_file.read())
             redirect_patterns = list(map(
                 convert_to_url_pattern,
                 redirect_dict.items()
             ))
 
     return redirect_patterns
+
