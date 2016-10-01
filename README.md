@@ -24,5 +24,7 @@ getubuntu/download_static: http://www.ubuntu.com/netbook/get-ubuntu/download
 
 # Also supports regex:
 testing/.+/alpha1/?:       https://wiki.ubuntu.com/QuantalQuetzal/TechnicalOverview/Alpha1
-```
 
+# And named groups
+placeone/(?P<something>.+)/?: /place2/{something}
+```

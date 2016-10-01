@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-yaml-redirects',
-    version='0.4',
+    version='0.5.0',
     author='Robin Winslow',
     author_email='robin@canonical.com',
     url='https://github.com/ubuntudesign/django-yaml-redirects',
@@ -18,4 +18,3 @@ setup(
         "PyYaml",
     ],
 )
-

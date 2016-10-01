@@ -6,12 +6,17 @@ from django.conf import settings
 from django.views.generic.base import RedirectView
 
 
+class FormatRedirect(RedirectView):
+    def get_redirect_url(self, **kwargs):
+        return self.url.format(**self.kwargs)
+
+
 def convert_to_url_pattern(redirect_pair):
     get_request, location = redirect_pair
 
     return_url = url(
         r'^{0}$'.format(get_request),
-        RedirectView.as_view(url=location)
+        FormatRedirect.as_view(url=location)
     )
 
     return return_url
@@ -56,4 +61,3 @@ def load_redirects():
             ))
 
     return redirect_patterns
-
