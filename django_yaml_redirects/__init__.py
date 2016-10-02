@@ -8,6 +8,11 @@ from django.views.generic.base import RedirectView
 
 class FormatRedirect(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
+        # Replace None with empty strings
+        for key, value in self.kwargs.items():
+            if value is None:
+                self.kwargs[key] = ''
+
         return self.url.format(**self.kwargs)
 
 
