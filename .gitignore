@@ -1,2 +1,3 @@
 django_yaml_redirects.egg-info/
 dist
+*.pyc

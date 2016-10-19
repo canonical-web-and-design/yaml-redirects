@@ -60,9 +60,10 @@ def load_redirects():
     if exists(redirect_file_path):
         with open(redirect_file_path) as redirect_file:
             redirect_dict = yaml.load(redirect_file.read())
-            redirect_patterns = list(map(
-                convert_to_url_pattern,
-                redirect_dict.items()
-            ))
+            if redirect_dict:
+                redirect_patterns = list(map(
+                    convert_to_url_pattern,
+                    redirect_dict.items()
+                ))
 
     return redirect_patterns
