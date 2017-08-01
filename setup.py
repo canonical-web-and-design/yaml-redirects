@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='canonicalwebteam.yaml-redirects',
-    version='0.5.4',
+    version='1.0.0',
     author='Canonical Webteam',
     url='https://github.com/ubuntudesign/yaml-redirects',
     packages=[
