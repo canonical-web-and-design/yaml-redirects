@@ -15,6 +15,5 @@ setup(
     install_requires=[
         "Django >= 1.3",
         "canonicalwebteam.views-from-yaml >= 0.2.0",
-        "PyYaml",
     ],
 )
