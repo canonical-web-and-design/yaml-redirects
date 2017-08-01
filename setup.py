@@ -1,12 +1,12 @@
 from setuptools import setup
 
 setup(
-    name='django-yaml-redirects',
+    name='canonicalwebteam.yaml-redirects',
     version='0.5.4',
     author='Canonical Webteam',
-    url='https://github.com/ubuntudesign/django-yaml-redirects',
+    url='https://github.com/ubuntudesign/yaml-redirects',
     packages=[
-        'django_yaml_redirects'
+        'canonicalwebteam.yaml_redirects'
     ],
     description=(
         'A simple redirects utility that uses '
@@ -14,6 +14,7 @@ setup(
     ),
     install_requires=[
         "Django >= 1.3",
+        "canonicalwebteam.views-from-yaml >= 0.2.0",
         "PyYaml",
     ],
 )
