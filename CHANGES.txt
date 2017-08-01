@@ -4,3 +4,4 @@ v0.3, 2016-04-06 -- Simplify handling of encodings
 v0.4, 2016-04-07 -- Use RedirectView so as to expand %(name)s variables
 v0.5.4, 2016-10-19 -- Prevent error for empty yaml file
 v1.0.0, 2017-08-01 -- Rename to canonicalwebteam.yaml-redirects; make use of canonicalwebteam.view-from-yaml
+v1.0.1, 2017-08-01 -- Fix dependencies in setup.py
