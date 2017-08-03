@@ -4,7 +4,7 @@ setup(
     name='canonicalwebteam.yaml-redirects',
     version='1.0.2',
     author='Canonical Webteam',
-    url='https://github.com/ubuntudesign/yaml-redirects',
+    url='https://github.com/canonical-webteam/yaml-redirects',
     packages=[
         'canonicalwebteam.yaml_redirects'
     ],
