@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='canonicalwebteam.yaml-redirects',
-    version='1.0.2',
+    version='1.0.4',
     author='Canonical Webteam',
     url='https://github.com/canonical-webteam/yaml-redirects',
     packages=[
@@ -14,6 +14,6 @@ setup(
     ),
     install_requires=[
         "Django >= 1.3",
-        "canonicalwebteam.views-from-yaml >= 0.2.2",
+        "canonicalwebteam.views-from-yaml >= 0.2.3",
     ],
 )
