@@ -6,3 +6,4 @@ v0.5.4, 2016-10-19 -- Prevent error for empty yaml file
 v1.0.0, 2017-08-01 -- Rename to canonicalwebteam.yaml-redirects; make use of canonicalwebteam.view-from-yaml
 v1.0.1, 2017-08-01 -- Fix dependencies in setup.py
 v1.0.2, 2017-08-01 -- Use views-from-yaml v0.2.2
+v1.0.4, 2017-11-22 -- Parse arguments from the request path into the target URL
