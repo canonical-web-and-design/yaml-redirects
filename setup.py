@@ -12,8 +12,13 @@ setup(
         'A simple redirects utility that uses '
         'a YAML file for redirects definitions'
     ),
-    install_requires=[
-        "Django >= 1.3",
-        "canonicalwebteam.views-from-yaml >= 0.2.3",
-    ],
+    extras_require={
+        "django":  [
+            "Django >= 1.3",
+            "canonicalwebteam.views-from-yaml >= 0.2.3",
+        ],
+        "flask": [
+            "flask"
+        ]
+    }
 )
