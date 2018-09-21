@@ -7,3 +7,4 @@ v1.0.0, 2017-08-01 -- Rename to canonicalwebteam.yaml-redirects; make use of can
 v1.0.1, 2017-08-01 -- Fix dependencies in setup.py
 v1.0.2, 2017-08-01 -- Use views-from-yaml v0.2.2
 v1.0.5, 2017-11-22 -- Parse arguments from the request path into the target URL
+v2.0.0, 2018-09-21 -- Flask support!
