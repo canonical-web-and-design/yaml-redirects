@@ -1,3 +1,9 @@
+**Deprecated**
+
+This module has been replaced by [canonicalwebteam.yaml-responses](https://github.com/canonical-webteam/yaml-responses). You should use that instead.
+
+---
+
 Usage
 -----
 
